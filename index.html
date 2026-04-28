@@ -1,515 +1,503 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>3D Portfolio - Hemanth Lakkimsetty</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakkimsetty Hemanth Kumar | CS Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>HK<span class="logo-bracket">/&gt;</span>
+      </a>
 
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"         class="nav-link">Home</a></li>
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
 
-    <!-- Scroll to top button -->
-    <div class="scroll-button">
-      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-track">
+            <i class='bx bx-sun  toggle-icon sun'>  ☀️</i>
+            <i class='bx bx-moon toggle-icon moon'>🌙</i>
+            <span class="toggle-thumb"></span>
+          </span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-circle c1"></div>
+      <div class="hero-circle c2"></div>
+      <div class="hero-circle c3"></div>
+      <div class="grid-overlay"></div>
     </div>
 
-    <!-- Navigation menu -->
-    <nav class="nav-3d">
-      <div class="navbar">
-        <div class="logo">
-          <a href="#" class="logo-3d">Portfolio<span class="accent">.</span></a>
-        </div>
-        <ul class="menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-        </ul>
-        <div class="media-icons">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-          <button class="dark-mode-toggle" id="darkModeToggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
-      </div>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">Hello, World! 👋</p>
+      <h1 class="hero-name reveal">
+        Lakkimsetty<br /><span class="accent-name">Hemanth Kumar</span>
+      </h1>
+      <p class="hero-role reveal">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-tagline reveal">
+        Crafting intelligent systems &amp; elegant code.<br />
+        Passionate about <strong>Java</strong> · <strong>AI</strong> · <strong>Machine Learning</strong>
+      </p>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <div class="hero-text">
-          <div class="text-one animate-text">Hello, I'm</div>
-          <div class="text-two animate-text">Hemanth Lakkimsetty</div>
-          <div class="text-three animate-text">Full-Stack Developer</div>
-          <div class="text-four animate-text">Crafting Digital Experiences with Code</div>
-          <div class="typing-text">
-            <span class="typing">I create</span>
-            <span class="cursor">|</span>
-          </div>
-        </div>
-        <div class="hero-image">
-                      <div class="profile-card">
-              <div class="profile-image">
-                <img src="./images/WhatsApp Image 2025-07-27 at 01.12.55_67476863.jpg" alt="Hemanth Lakkimsetty" />
-              </div>
-  
-          </div>
-        </div>
-        <div class="cta-buttons">
-          <button class="btn-primary" onclick="window.location.href='mailto:youremail@example.com'">
-            <span>Contact Me</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-          <button class="btn-secondary" onclick="window.location.href='#projects'">
-            <span>View Projects</span>
-            <i class="fas fa-code"></i>
-          </button>
-        </div>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class='bx bx-code-alt'></i> View My Work
+        </a>
+        <a href="mailto:lakkimsettyhemanth24@gmail.com" class="btn btn-outline">
+          <i class='bx bx-envelope'></i> Hire Me
+        </a>
       </div>
-      <div class="scroll-indicator">
-        <div class="scroll-dot"></div>
-        <span>Scroll Down</span>
-      </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="content">
-        <div class="title">
-          <span class="section-title">About Me</span>
-          <div class="title-underline"></div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/HemanthLakkimsetty"    target="_blank" class="social-link" aria-label="GitHub">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://linkedin.com/in/hemanthlakkimsetty2624" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="mailto:lakkimsettyhemanth24@gmail.com" class="social-link" aria-label="Email">
+          <i class='bx bx-envelope'></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap reveal">
+      <div class="hero-avatar">
+        <div class="avatar-ring r1"></div>
+        <div class="avatar-ring r2"></div>
+            <div class="avatar-inner">
+                <img src="photo.jpeg" alt="Hemanth Kumar" class="avatar-photo" />
+            </div>
+        <div class="floating-badge fb1"><i class='bx bxl-java'></i> Java</div>
+        <div class="floating-badge fb2"><i class='bx bx-brain'></i> AI/ML</div>
+        <div class="floating-badge fb3"><i class='bx bxl-python'></i> Python</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint">
+      <i class='bx bx-chevron-down'></i>
+    </a>
+  </section>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a final-year <strong>Computer Science &amp; Engineering</strong> student at
+            Vel Tech R&D Institute of Science and Technology, graduating in 2026 with a
+            CGPA of <strong>8.54 / 10</strong>.
+          </p>
+          <p>
+            My passion lies at the intersection of <strong>software engineering</strong> and
+            <strong>artificial intelligence</strong> — building systems that are not only
+            functional but genuinely intelligent. I specialize in Java, Python, and
+            Machine Learning, with hands-on project experience in deep learning and
+            full-stack development.
+          </p>
+          <p>
+            Outside of code, I enjoy competitive problem-solving on LeetCode and leading
+            teams through hackathons and collaborative projects.
+          </p>
+          <a href="#contact" class="btn btn-primary mt-md">
+            <i class='bx bx-paper-plane'></i> Let's Connect
+          </a>
         </div>
-        <div class="about-details">
-          <div class="right">
-            <div class="topic">A Little About Myself</div>
-            <p>
-              Hello! My name is <strong>Hemanth Lakkimsetty</strong>, and I am currently
-              pursuing a Bachelor of Technology (B.Tech) degree at <strong>Vel Tech University</strong> in Avadi, Chennai. 
-              I am deeply passionate about technology and <strong>full-stack development.</strong>
-              My journey is driven by hands-on <strong>projects</strong> and <strong>coding challenges</strong> that enhance my technical acumen. 
-              With a strong <strong>positive attitude</strong> and a commitment to continuous growth, 
-              I am eager to embrace new challenges in the tech industry and contribute to impactful and <strong>innovative solutions</strong>.
+        <div class="education-timeline reveal">
+          <h3 class="sub-title"><i class='bx bx-graduation'></i> Education</h3>
+
+          <div class="edu-card active">
+            <div class="edu-dot"></div>
+            <div class="edu-body">
+              <span class="edu-year">2022 – 2026</span>
+              <h4>B.Tech – CSE</h4>
+              <p>Vel Tech R&D Institute of Science and Technology</p>
+              <span class="edu-grade">CGPA: 8.54 / 10</span>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-dot"></div>
+            <div class="edu-body">
+              <span class="edu-year">2020 – 2022</span>
+              <h4>Intermediate (MPC)</h4>
+              <p>Uma Maheswara Junior College</p>
+              <span class="edu-grade">CGPA: 8.8 / 10</span>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-dot"></div>
+            <div class="edu-body">
+              <span class="edu-year">2015 – 2020</span>
+              <h4>Secondary School Certificate (SSC)</h4>
+              <p>Saviour High School</p>
+              <span class="edu-grade">CGPA: 9.2 / 10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — Skills</span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class='bx bx-code-curly'></i>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill"><i class='bx bxl-java'></i> Java</span>
+            <span class="pill"><i class='bx bxl-python'></i> Python</span>
+            <span class="pill"><i class='bx bx-data'></i> SQL</span>
+            <span class="pill"><i class='bx bxl-html5'></i> HTML</span>
+            <span class="pill"><i class='bx bxl-css3'></i> CSS</span>
+            <span class="pill"><i class='bx bxl-javascript'></i> JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class='bx bx-wrench'></i>
+            <h3>Tools &amp; IDEs</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill"><i class='bx bxl-visual-studio'></i> VS Code</span>
+            <span class="pill"><i class='bx bx-code'></i> Eclipse IDE</span>
+            <span class="pill"><i class='bx bx-cloud'></i> Google Colab</span>
+            <span class="pill"><i class='bx bx-server'></i> MySQL Workbench</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class='bx bxl-github'></i>
+            <h3>Version Control</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill"><i class='bx bxl-git'></i> Git</span>
+            <span class="pill"><i class='bx bxl-github'></i> GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class='bx bx-book-open'></i>
+            <h3>Core Concepts</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill"><i class='bx bx-cube-alt'></i> OOPs</span>
+            <span class="pill"><i class='bx bx-data'></i> DBMS</span>
+            <span class="pill"><i class='bx bx-brain'></i> Machine Learning</span>
+            <span class="pill"><i class='bx bx-layer'></i> Full Stack Dev</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+      <div class="featured-project reveal">
+        <div class="featured-label"><i class='bx bx-star'></i> Featured Project</div>
+        <div class="featured-content">
+          <div class="featured-text">
+            <h3 class="project-title">Deepfake Detection System</h3>
+            <p class="project-desc">
+              Developed a deepfake detection system using image preprocessing and feature
+              extraction techniques to identify fake images and videos. Applied OpenCV for
+              preprocessing, then trained CNN + LSTM models for classification — gaining
+              deep expertise in computer vision and media forensics.
             </p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number">3+</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">15+</span>
-                <span class="stat-label">Projects Completed</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">8.34</span>
-                <span class="stat-label">CGPA</span>
-              </div>
+            <div class="tech-stack">
+              <span>Python</span><span>OpenCV</span><span>CNN</span>
+              <span>LSTM</span><span>TensorFlow</span><span>NumPy</span><span>Pandas</span>
             </div>
-            <div class="button">
-              <button class="btn-download">
-                <i class="fas fa-download"></i>
-                <span>Download Resume</span>
-              </button>
+            <a href="https://github.com/HemanthLakkimsetty/deepfake-sys" target="_blank" class="btn btn-primary">
+              <i class='bx bxl-github'></i> View Repository
+            </a>
+          </div>
+          <div class="featured-visual">
+            <div class="code-window">
+              <div class="cw-header"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="cw-title">detector.py</span></div>
+              <pre class="cw-body"><span class="kw">import</span> cv2, tensorflow <span class="kw">as</span> tf
+<span class="kw">from</span> cnn_lstm <span class="kw">import</span> DeepfakeModel
+
+model = DeepfakeModel.load(<span class="str">"weights.h5"</span>)
+frame = cv2.imread(<span class="str">"suspect.jpg"</span>)
+preprocessed = preprocess(frame)
+pred = model.predict(preprocessed)
+
+<span class="kw">if</span> pred[<span class="num">0</span>] &gt; <span class="num">0.85</span>:
+    <span class="fn">flag</span>(<span class="str">"⚠️ DEEPFAKE DETECTED"</span>)
+<span class="kw">else</span>:
+    <span class="fn">clear</span>(<span class="str">"✅ Authentic Media"</span>)</pre>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class='bx bx-wallet project-icon'></i>
+            <div class="project-links">
+              <a href="https://github.com/HemanthLakkimsetty/expense-analytics-system" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+          </div>
+          <h3>Expense Tracker &amp; Financial Analytics</h3>
+          <p>Built an expense management system for income tracking, budget planning, and monthly financial reports with full-stack Java implementation.</p>
+          <div class="tech-stack sm">
+            <span>Java Servlets</span><span>JDBC</span><span>MySQL</span><span>JS</span>
+          </div>
+        </div>
 
-    <!-- Education Section -->
-    <section class="education" id="education">
-      <div class="content">
-        <div class="title">
-          <span class="section-title">Education</span>
-          <div class="title-underline"></div>
-        </div>
-        <div class="education-details">
-          <div class="education-card">
-            <div class="card-header">
-              <div class="institution">
-                <strong>Vel Tech Rangarajan Dr.Sagunthala RD Institute of Science and Technology</strong>
-              </div>
-              <div class="location">Chennai</div>
-            </div>
-            <div class="card-body">
-              <div class="year">2022 - Present</div>
-              <div class="degree">Bachelor of Technology in Computer Science and Engineering</div>
-              <div class="cgpa">CGPA: 8.34</div>
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class='bx bx-shield-quarter project-icon'></i>
+            <div class="project-links">
+              <a href="https://github.com/HemanthLakkimsetty/Phishing-URL-Detection-System" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
             </div>
           </div>
-          
-          <div class="education-card">
-            <div class="card-header">
-              <div class="institution">
-                <strong>Umamaheswara Junior College</strong>
-              </div>
-              <div class="location">Ongole</div>
-            </div>
-            <div class="card-body">
-              <div class="year">2020 - 2022</div>
-              <div class="degree">Intermediate, Board of Secondary Education, Andhra Pradesh</div>
-              <div class="cgpa">CGPA: 8.8</div>
-            </div>
-          </div>
-          
-          <div class="education-card">
-            <div class="card-header">
-              <div class="institution">
-                <strong>Saviour High School</strong>
-              </div>
-              <div class="location">Khairatabad</div>
-            </div>
-            <div class="card-body">
-              <div class="year">2015 - 2020</div>
-              <div class="degree">State Board of Secondary Education, Hyderabad</div>
-              <div class="cgpa">CGPA: 9.2</div>
-            </div>
+          <h3>Phishing URL Detection System</h3>
+          <p>Built a phishing URL detection system using Random Forest and NLP-based feature extraction to classify malicious vs. legitimate websites.</p>
+          <div class="tech-stack sm">
+            <span>ML</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span>
           </div>
         </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <i class='bx bx-globe project-icon'></i>
+            <div class="project-links">
+              <a href="https://github.com/HemanthLakkimsetty/Personal-Portfolio-Website" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+          </div>
+          <h3>Personal Portfolio Website</h3>
+          <p>Designed and developed a responsive portfolio website to showcase projects, certifications, and professional achievements with modern UI/UX.</p>
+          <div class="tech-stack sm">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
       </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-      <div class="content">
-        <div class="title">
-          <span class="section-title">My Skills</span>
-          <div class="title-underline"></div>
-        </div>
-        <div class="skills-details">
-          <div class="text">
-            <div class="topic">Skills Reflect My Learning Journey</div>
-            <p>
-              As a third-year B.Tech student, I've honed my skills and earned certifications in various domains, showcasing my dedication and expertise. Click on a skill to view the associated certificate.
-            </p>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-card" data-skill="html-css">
-              <div class="skill-icon">
-                <i class="fab fa-html5"></i>
-              </div>
-              <div class="skill-content">
-                <h3>HTML & CSS</h3>
-                <p>Proficient in creating responsive and interactive web pages.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 90%"></div>
-                  </div>
-                  <span>90%</span>
-                </div>
-                <a href="certificates/html-css-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
-
-            <div class="skill-card" data-skill="javascript">
-              <div class="skill-icon">
-                <i class="fab fa-js-square"></i>
-              </div>
-              <div class="skill-content">
-                <h3>JavaScript</h3>
-                <p>Skilled in DOM manipulation, ES6+, and dynamic web features.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 85%"></div>
-                  </div>
-                  <span>85%</span>
-                </div>
-                <a href="certificates/javascript-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
-
-            <div class="skill-card" data-skill="python">
-              <div class="skill-icon">
-                <i class="fab fa-python"></i>
-              </div>
-              <div class="skill-content">
-                <h3>Python</h3>
-                <p>Skilled in Python programming with experience in building applications and automating tasks.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 80%"></div>
-                  </div>
-                  <span>80%</span>
-                </div>
-                <a href="certificates/Python-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
-
-            <div class="skill-card" data-skill="java">
-              <div class="skill-icon">
-                <i class="fab fa-java"></i>
-              </div>
-              <div class="skill-content">
-                <h3>Java</h3>
-                <p>Strong knowledge of Java for backend development and application logic.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 75%"></div>
-                  </div>
-                  <span>75%</span>
-                </div>
-                <a href="certificates/java-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
-
-            <div class="skill-card" data-skill="mysql">
-              <div class="skill-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              <div class="skill-content">
-                <h3>MySQL</h3>
-                <p>Knowledgeable in database design, queries, and management.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 70%"></div>
-                  </div>
-                  <span>70%</span>
-                </div>
-                <a href="certificates/mysql-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
-
-            <div class="skill-card" data-skill="react">
-              <div class="skill-icon">
-                <i class="fab fa-react"></i>
-              </div>
-              <div class="skill-content">
-                <h3>React.js</h3>
-                <p>Intermediate experience in building dynamic user interfaces.</p>
-                <div class="skill-level">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 65%"></div>
-                  </div>
-                  <span>65%</span>
-                </div>
-                <a href="certificates/reactjs-certificate.pdf" target="_blank" class="certificate-link">
-                  <i class="fas fa-certificate"></i>
-                  View Certificate
-                </a>
-              </div>
-            </div>
+      <div class="github-explore reveal">
+        <div class="explore-left">
+          <i class='bx bxl-github explore-icon'></i>
+          <div>
+            <h3>Explore More Projects</h3>
+            <p>Visit my GitHub repositories to explore more practical projects and continuous learning work including Space Invaders Game (Java), Online Code Collaborator, Spam Email Filter, and additional self-learning projects.</p>
           </div>
         </div>
+        <a href="https://github.com/HemanthLakkimsetty" target="_blank" class="btn btn-primary">
+          <i class='bx bxl-github'></i> Visit GitHub
+        </a>
       </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="content">
-        <div class="title">
-          <span class="section-title">My Projects</span>
-          <div class="title-underline"></div>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/YourGitHubUsername/portfolio-website" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" class="project-link">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <i class="fas fa-code project-icon"></i>
-            </div>
-            <div class="project-content">
-              <h3>Responsive Portfolio Website</h3>
-              <p>A sleek, responsive personal portfolio website showcasing your skills, certifications, and projects using HTML, CSS, and JavaScript.</p>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/YourGitHubUsername/student-management-system" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" class="project-link">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <i class="fas fa-database project-icon"></i>
-            </div>
-            <div class="project-content">
-              <h3>Student Management System</h3>
-              <p>A simple CRUD application using Java, Spring Boot, and MySQL to manage student records with functionality to add, update, delete, and view details.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Spring Boot</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/YourGitHubUsername/ecommerce-platform" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" class="project-link">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <i class="fas fa-shopping-cart project-icon"></i>
-            </div>
-            <div class="project-content">
-              <h3>E-Commerce Platform</h3>
-              <p>A full-stack e-commerce website using Java (Spring Boot), MySQL, and React.js, featuring user authentication, product catalogs, and payment integration.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/YourGitHubUsername/data-visualization-dashboard" target="_blank" class="project-link">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" class="project-link">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <i class="fas fa-chart-line project-icon"></i>
-            </div>
-            <div class="project-content">
-              <h3>Data Visualization Dashboard</h3>
-              <p>An interactive dashboard using React.js and Chart.js for data visualization, pulling dynamic data from REST APIs built with Spring Boot.</p>
-              <div class="project-tech">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">Chart.js</span>
-                <span class="tech-tag">Spring Boot</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+  </section>
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"></span>
+        <h2 class="section-title">Credentials</h2>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="content">
-        <div class="title">
-          <span class="section-title">Contact Me</span>
-          <div class="title-underline"></div>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class='bx bxl-java'></i></div>
+          <div class="cert-body">
+            <h4>Core Java</h4>
+            <span class="cert-provider">Infosys Springboard</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1f1Ul53CWvDs4eY1gvZx3L8EJkmoc49q-/view?usp=drive_link" target="_blank" class="btn-cert">
+            <i class='bx bx-link-external'></i> View Certificate
+          </a>
         </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="contact-details">
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">yourlinkedinprofile</a>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="contact-details">
-                <h3>WhatsApp</h3>
-                <a href="https://wa.me/yourwhatsappnumber" target="_blank">+91 yourwhatsappnumber</a>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <a href="mailto:youremail@example.com">youremail@example.com</a>
-              </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon sql"><i class='bx bx-data'></i></div>
+          <div class="cert-body">
+            <h4>SQL &amp; Relational Databases</h4>
+            <span class="cert-provider">IBM Cognitive Class</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1tjkQr9s-DLC0Kj3HAp224VlAUzhi5v1s/view?usp=drive_link" target="_blank" class="btn-cert">
+            <i class='bx bx-link-external'></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon web"><i class='bx bx-globe'></i></div>
+          <div class="cert-body">
+            <h4>Web Development</h4>
+            <span class="cert-provider">Coursera</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1G23_zAj6mBvxr_oLl--6GO_ey21Ca5Y9/view?usp=drive_link" target="_blank" class="btn-cert">
+            <i class='bx bx-link-external'></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon py"><i class='bx bxl-python'></i></div>
+          <div class="cert-body">
+            <h4>Python Programming</h4>
+            <span class="cert-provider">Infosys Springboard</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1c4hxOqKPZcp6sDldR6am2jpgdBeCKwHs/view?usp=drive_link" target="_blank" class="btn-cert">
+            <i class='bx bx-link-external'></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon dsa"><i class='bx bx-sitemap'></i></div>
+          <div class="cert-body">
+            <h4>Data Structures &amp; Algorithms</h4>
+            <span class="cert-provider">Infosys Springboard</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1zdS3P_nFGvSsfHa0TaV3QSOYpzHVOnfG/view?usp=sharing" target="_blank" class="btn-cert">
+            <i class='bx bx-link-external'></i> View Certificate
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 — Achievements</span>
+        <h2 class="section-title">Milestones</h2>
+      </div>
+
+      <div class="achievements-grid">
+
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class='bx bx-trophy'></i></div>
+          <h4>Internal Hackathon – Team Lead</h4>
+          <p>Participated in an internal Hackathon at Vel Tech University as Team Lead, recognized for strong leadership and project coordination.</p>
+        </div>
+
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class='bx bx-code-block'></i></div>
+          <h4>150+ LeetCode Problems Solved</h4>
+          <p>Solved 150+ LeetCode problems primarily in Java and Python, building strong problem-solving and placement-focused development skills.</p>
+        </div>
+
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class='bx bx-star'></i></div>
+          <h4>CGPA: 8.54 / 10</h4>
+          <p>Maintaining a strong academic record throughout B.Tech in Computer Science Engineering at Vel Tech R&D Institute.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06 — Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-sub">I'm actively looking for exciting opportunities. Whether you have a question, an opportunity, or just want to say hi — my inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class='bx bx-envelope'></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:lakkimsettyhemanth24@gmail.com" class="contact-value">lakkimsettyhemanth24@gmail.com</a>
             </div>
           </div>
-          
-          <div class="contact-form">
-            <h3>Send me a message</h3>
-            <form>
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn-submit">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class='bx bxl-linkedin'></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/hemanthlakkimsetty2624" target="_blank" class="contact-value">hemanthlakkimsetty2624</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class='bx bxl-github'></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/HemanthLakkimsetty" target="_blank" class="contact-value">HemanthLakkimsetty</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class='bx bx-map'></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">India 🇮🇳</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-text">
-          <span>Created By <a href="#">Hemanth Lakkimsetty</a> </span>
+        <div class="contact-cta-card reveal">
+          <i class='bx bx-rocket'></i>
+          <h3>Open to Opportunities</h3>
+          <p>Currently seeking internships and full-time roles in Software Development, AI/ML Engineering, and Full-Stack Development.</p>
+          <a href="mailto:lakkimsettyhemanth24@gmail.com" class="btn btn-primary">
+            <i class='bx bx-paper-plane'></i> Send Me a Message
+          </a>
         </div>
-        <div class="footer-social">
-          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-    </footer>
 
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo"><span class="logo-bracket">&lt;</span>HK<span class="logo-bracket">/&gt;</span></p>
+      <p class="footer-copy">Designed &amp; Built by <strong>Lakkimsetty Hemanth Kumar</strong> · 2024</p>
+      <div class="footer-socials">
+        <a href="https://github.com/HemanthLakkimsetty" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://linkedin.com/in/hemanthlakkimsetty2624" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="mailto:lakkimsettyhemanth24@gmail.com"><i class='bx bx-envelope'></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
